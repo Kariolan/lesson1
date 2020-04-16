@@ -15,64 +15,60 @@ var appData = {
     saving: false
 };
 
+for (let i = 0; i  < 2; i++) {
+    let a = prompt("Введите обязательную статью расходов в этом месяце");
+    let b = +prompt("Во сколько обойдется?");
 
-//3 block
-let q1 = prompt("Введите обязательную статью расходов в этом месяце");
-let q2 = +prompt("Во сколько обойдется?");
-let q3 = prompt("Введите обязательную статью расходов в этом месяце");
-let q4 = +prompt("Во сколько обойдется?");
+    if ( (typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '') {
+        console.log("done");
+        appData.expenses[a] = b;
+    } else {
 
-appData.expenses[q1] = q2;
-appData.expenses[q3] = q4;
+    }
 
+};
+
+// let i=0;
+// while (i < 2) {
+//     let a = prompt("Введите обязательную статью расходов в этом месяце"),
+//         b = +prompt("Во сколько обойдется?");
+//     if ( (typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '') {
+//         console.log("done");
+//         appData.expenses[a] = b;
+//         i++;
+//     } else {
+//         console.log("error");
+//         i++
+//     };
+// };
+
+// let i=0;
+// do {
+//     let a = prompt("Введите обязательную статью расходов в этом месяце"),
+//         b = +prompt("Во сколько обойдется?");
+//     if ( (typeof(a)) === "string" && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '') {
+//         console.log("done");
+//         appData.expenses[a] = b;
+//         i++;
+//     } else {
+//         console.log("error");
+//         i++;
+//     };
+// }
+// while (i < 2);
 
 // 4 block
-alert(appData.budget/30);
+appData.moneyPerDay = appData.budget / 30;
+alert("Ежедневный бюджет:" + appData.moneyPerDay);
 
-
+if (appData.moneyPerDay < 100) {
+    console.log("Минимальный уровень достатка");
+} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
+    console.log("Средний уровень достатка");
+} else if (appData.moneyPerDay > 2000) {
+    console.log("Высокий уровень достатка");
+} else {
+    console.log("Произошла ошибка");
+}
 //log
 // expenses[firstQ] = secondQ;
-console.log(appData.expenses);
-
-
-// 
-//var leftBoardWidth = 1;
-// {
-//     let second = 2;
-//     console.log(second);
-// }
-// const pi = 3.14;
-// console.log(4/0);
-// var person = {
-//     name: "John",
-//     age: 25,
-//     isMerried: false
-// }
-
-// console.log(person["name"]);
-
-// let arr = ['aaa','bbb','ccc'];
-
-// console.log(arr[1]);
-
-// let answer = confirm("fffff");
-
-// console.log(answer);
-
-// let answer = +prompt("Есть ли Вам 18?", "Yes");
-
-// console.log(typeof(answer));
-
-// console.log("arr" + " - object");
-// console.log(5 + (answer));
-
-// let incr = 10,
-//     decr = 10;
-
-
-// console.log(incr++);
-// console.log(decr--);
-
-// let isChecked = false,
-//     isClose = false;
-// console.log(isChecked || !isClose);
